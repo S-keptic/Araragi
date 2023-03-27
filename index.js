@@ -24,12 +24,12 @@ client.on('interactionCreate', async interaction => {
 
 
 
-interaction.reply("you are a nigger")
 
 
 
   }
 });
+
 
 
 client.login(process.env.TOKEN);
