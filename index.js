@@ -15,7 +15,7 @@ client.on('ready', () => {
 client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'ping') {
+  if (interaction.commandName === 'porn') {
     
     const waifu = async ()=>{
       let url =  await fetch('https://api.waifu.pics/nsfw/waifu')
