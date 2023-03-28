@@ -15,22 +15,24 @@ client.on('ready', () => {
 client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'porn') {
-    
-    const waifu = async ()=>{
-      let url =  await fetch('https://api.waifu.pics/nsfw/waifu')
-      let data = await url.json()
-      let result = data.url
-      interaction.reply(result)
-      console.log(result)
+  if (interaction.commandName === 'random'){
+    const anime = async()=>{
+      let url = await fetch('https://api.jikan.moe/v4/random/anime')
+      url = await url.json()
+      url = url.data.url
+      await interaction.reply(url)
 
     }
-    waifu()
-
-
-
-
+    anime()
   }
+
+
+
+
+  
+
+  
+
 });
 
 

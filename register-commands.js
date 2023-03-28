@@ -3,10 +3,12 @@ require('dotenv').config()
 const { REST, Routes }  = require('discord.js')
 
 const commands = [
-  {
-    name: 'porn',
-    description: 'Replies with Porn!',
-  },
+
+{
+  name: 'random',
+  description: 'suggests a random anime'
+
+},
 
 
 ];
