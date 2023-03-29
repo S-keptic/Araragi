@@ -8,6 +8,7 @@ const fetch = require("node-fetch");
 
 
 
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -15,14 +16,46 @@ client.on('ready', () => {
 client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
+ 
+
+
+
+
+
+
+
+
+
   if (interaction.commandName === 'random'){
     const anime = async()=>{
       let url = await fetch('https://api.jikan.moe/v4/random/anime')
       url = await url.json()
-      url = url.data.url
-      await interaction.reply(url)
+      let name = url.data.titles.title
+      url = url.data.duration
+      const embed = new EmbedBuilder()
+      .setTitle(`${name}`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      await interaction.reply({ embeds: [embed] })
 
     }
+
+
     anime()
   }
 
